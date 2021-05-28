@@ -1,16 +1,19 @@
 var age = prompt ("inserisci età");
 var km = prompt ("quanti km vuoi percorrere?");
-var x = 0.21;
-var prezzo = parseInt(km) * parseInt(x);
-var scontoVenti = parseInt(prezzo) * 20 / 100;
-var scontoQuaranta = parseInt(prezzo) * 40 / 100;
+var prezzo = parseInt(km) * 0.21;
+var totaleVenti = prezzo * 20 / 100;
+var totaleQuaranta = prezzo * 40 / 100;
+var totaleUno = prezzo - totaleVenti;
+var totaleDue = prezzo - totaleQuaranta;
 
 age = parseInt(age);
 km = parseInt(km);
-x = parseInt(x);
-venti = parseInt(venti);
-quaranta = parseInt(quaranta);
+
 
 if (age < 18){
-    document.getElementById("prezzoTotale").innerHTML = "ciao" + prezzo + scontoVenti;
+    document.getElementById("prezzoTotale").innerHTML = "Ciao il prezzo totale è: " + totaleUno;
+}else if (age >= 18 && age < 65){
+    document.getElementById("prezzoTotale").innerHTML = "Ciao il prezzo totale è: " + prezzo;
+}else{
+    document.getElementById("prezzoTotale").innerHTML = "Ciao il prezzo totale è: " + totaleDue;
 }
