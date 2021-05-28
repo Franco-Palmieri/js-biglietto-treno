@@ -5,7 +5,6 @@ var totaleVenti = prezzo * 20 / 100;
 var totaleQuaranta = prezzo * 40 / 100;
 var totaleUno = prezzo - totaleVenti;
 var totaleDue = prezzo - totaleQuaranta;
-
 age = parseInt(age);
 km = parseInt(km);
 
